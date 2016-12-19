@@ -40,6 +40,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var lolSlider: UISlider!
     @IBOutlet weak var lolView: UIView!
    
+    @IBOutlet weak var resetView: UIView!
+    @IBOutlet weak var resetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +57,7 @@ class SettingsViewController: UIViewController {
         //Load current state at which the switch is at
         let switchBool = defaults.boolForKey("switch")
         themeSwitch.setOn(switchBool, animated: false)
-        
+    
         //Set theme and color
         if defaults.stringForKey("theme") == "dark"{
             Style.darkTheme()
@@ -63,10 +65,40 @@ class SettingsViewController: UIViewController {
         else {Style.lightTheme()}
         self.setTheme()
         
+        //Set Sliders
+        if defaults.objectForKey("sadSlider") == nil {
+            sadSlider.setValue(10, animated: false)
+            sadLabel.text = "10%"
+            
+            happySlider.setValue(15, animated: false)
+            happyLabel.text = "15%"
+            
+            lolSlider.setValue(20, animated: false)
+            lolLabel.text = "20%"
+        }
+        
+        else {
+            
+            let sadValue = defaults.integerForKey("sadSlider")
+            sadSlider.setValue(Float(sadValue), animated: false)
+            sadLabel.text = String(sadValue) + "%"
+            
+            let happyValue = defaults.integerForKey("happySlider")
+            happySlider.setValue(Float(happyValue), animated: false)
+            happyLabel.text = String(happyValue) + "%"
+            
+            let lolValue = defaults.integerForKey("lolSlider")
+            lolSlider.setValue(Float(lolValue), animated: false)
+            lolLabel.text = String(lolValue) + "%"
+        }
+        
+        
+        
+        
         defaults.synchronize()
 
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -75,33 +107,65 @@ class SettingsViewController: UIViewController {
     
     func setTheme(){
         //Set Default
-        setDefaultView.backgroundColor = Style.lightBar
+        setDefaultView.backgroundColor = Style.darkBar
         setDefaultLabel.textColor = Style.darkText
+        defaultControl.tintColor = Style.darkText
+        defaultControl.backgroundColor = Style.lightBar
+
         
         //Set theme switch
         themeLabel.textColor = Style.darkText
-        themeView.backgroundColor = Style.darkBar
+        themeView.backgroundColor = Style.lightBar
+        themeSwitch.onTintColor = Style.darkText
         
         defaultGratuityText.textColor = Style.darkText
-        defaultGratuityView.backgroundColor = Style.lightBar
+        defaultGratuityView.backgroundColor = Style.darkBar
         
         //Sad
         sadView.backgroundColor = Style.lightBar
-        //sadIcon.tintColor =
         sadLabel.textColor = Style.darkText
+        sadIcon.image = sadIcon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+         sadIcon.tintColor = Style.darkText
         
         //Happy
         happyView.backgroundColor = Style.lightBar
-        //happyIcon.tintColor =
         happyLabel.textColor = Style.darkText
+        happyIcon.image = happyIcon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        happyIcon.tintColor = Style.darkText
         
         //LOL
         lolView.backgroundColor = Style.lightBar
-        //lolIcon.tintColor =
         lolLabel.textColor = Style.darkText
+        lolIcon.image = lolIcon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        lolIcon.tintColor = Style.darkText
         
+        resetView.backgroundColor = Style.darkBar
+        resetButton.tintColor = Style.darkText
+        
+        //Slider
+        sadSlider.minimumTrackTintColor = Style.darkText
+        happySlider.minimumTrackTintColor = Style.darkText
+        lolSlider.minimumTrackTintColor = Style.darkText
     }
     
+    @IBAction func resetGratuity(sender: AnyObject) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        sadSlider.setValue(10, animated: false)
+        defaults.setInteger(10, forKey: "sadSlider")
+        sadLabel.text = "10%"
+        
+        happySlider.setValue(15, animated: false)
+        defaults.setInteger(15, forKey: "happySlider")
+        happyLabel.text = "15%"
+        
+        lolSlider.setValue(20, animated: false)
+        defaults.setInteger(20, forKey: "lolSlider")
+        lolLabel.text = "20%"
+
+        
+        
+    }
     //Allow user to set the default index for the segment control (faces)
     @IBAction func setDefault(sender: UISegmentedControl) {
         let tipDefault = NSUserDefaults.standardUserDefaults()
@@ -149,7 +213,31 @@ class SettingsViewController: UIViewController {
         self.setTheme()
 
     }
+    @IBAction func sadSliderValueChanged(sender: UISlider) {
+        sadLabel.text = "\(Int(sender.value))%"
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        defaults.setInteger(Int(sender.value), forKey: "sadSlider")
+        defaults.synchronize()
+    }
+    
+    @IBAction func happySliderValueChanged(sender: UISlider) {
+        happyLabel.text = "\(Int(sender.value))%"
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(Int(sender.value), forKey: "happySlider")
+        defaults.synchronize()
+    }
+    
    
+    @IBAction func lolSliderValueChanged(sender: UISlider) {
+        lolLabel.text = "\(Int(sender.value))%"
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(Int(sender.value), forKey: "lolSlider")
+        defaults.synchronize()
+        
+    }
     
   
     /*

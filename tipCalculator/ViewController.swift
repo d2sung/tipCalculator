@@ -21,7 +21,20 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var tipperView: UIView!
     @IBOutlet weak var tipView: UIView!
     @IBOutlet weak var totalView: UIView!
-
+    @IBOutlet weak var checkSplitLabel1: UILabel!
+    @IBOutlet weak var checkSplitLabel2: UILabel!
+    @IBOutlet weak var checkSplitLabel3: UILabel!
+    @IBOutlet weak var checkSplitLabel4: UILabel!
+    
+    @IBOutlet weak var userStepper: UIStepper!
+    @IBOutlet weak var numUserLabel: UILabel!
+    @IBOutlet weak var splitterView: UIView!
+    
+    @IBOutlet weak var equationSign: UILabel!
+    @IBOutlet weak var plusSign: UILabel!
+    
+    
+    @IBOutlet var userIcons: [UIImageView]!
     var initial:Bool = true
     var startup:Bool = true
     var fromSettings:Bool = false
@@ -54,7 +67,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         self.setTheme()
         
         self.calculateTip(self)
-        startup = true
+        startup = false
     }
     
     
@@ -70,6 +83,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     override func viewDidAppear(animated: Bool) {
         let defaults = NSUserDefaults.standardUserDefaults()
         
+        //If coming back from settings, display the existing value in billField
         if defaults.boolForKey("fromSettings"){
             billField.text = defaults.stringForKey("bill")
             defaults.setBool(false, forKey: "fromSettings")
@@ -114,6 +128,29 @@ class ViewController: UIViewController, UITextFieldDelegate{
         totalLabel.textColor = Style.totalTextColor
         
         
+        for userIcon in self.userIcons {
+        
+            userIcon.image = userIcon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        
+            userIcon.tintColor = Style.facesTintColor
+        }
+        
+        splitterView.backgroundColor = Style.splitterColor
+        
+        checkSplitLabel1.textColor = Style.totalTextColor
+        checkSplitLabel2.textColor = Style.totalTextColor
+        checkSplitLabel3.textColor = Style.totalTextColor
+        checkSplitLabel4.textColor = Style.totalTextColor
+        numUserLabel.textColor = Style.facesTintColor
+        
+        userStepper.tintColor = Style.facesTintColor
+        plusSign.textColor = Style.facesTintColor
+        equationSign.textColor = Style.facesTintColor
+        
+        billField.setPlaceholderColor(UIColor(red:0.81, green:0.85, blue:0.86, alpha:0.30))
+        billField.tintColor = Style.facesTintColor
+        
+        UINavigationBar.appearance().barTintColor = Style.totalTextColor
     }
     
     
@@ -167,6 +204,32 @@ class ViewController: UIViewController, UITextFieldDelegate{
         return true;
     }
     
+    @IBAction func stepperValueChanged(sender: UIStepper) {
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        let total = defaults.doubleForKey("total")
+        
+        //Seperate tip and total by thousands
+        let currencyFormatter = NSNumberFormatter()
+        currencyFormatter.numberStyle = .CurrencyStyle
+        currencyFormatter.locale = NSLocale.currentLocale()
+        
+        checkSplitLabel4.text = currencyFormatter.stringFromNumber(total / sender.value)
+        
+        //let numberOfUsers = String(format: "%d", sender.value)
+        
+        numUserLabel.text = "x" + Int(sender.value).description
+    }
+    
+    
+    @IBAction func formatBillField(sender: AnyObject) {
+        let currencyFormatter = NSNumberFormatter()
+        currencyFormatter.numberStyle = .CurrencyStyle
+        currencyFormatter.locale = NSLocale.currentLocale()
+        
+        billField.text = currencyFormatter.stringFromNumber(0)
+    }
  
     
     /* calculateTip:
@@ -180,18 +243,35 @@ class ViewController: UIViewController, UITextFieldDelegate{
         //Save current bill value
         billDefault.setValue(billField.text, forKey: "bill")
         
-        let tipPercentages = [0.10, 0.15, 0.20]
-        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
+        let sadValue = billDefault.integerForKey("sadSlider")
+    
+        let happyValue = billDefault.integerForKey("happySlider")
+        
+        let lolValue = billDefault.integerForKey("lolSlider")
+        
+        let tipPercentages = [Double(sadValue)/100, Double(happyValue)/100, Double(lolValue)/100, 0]
+        
+        let tip = bill * Double(tipPercentages[tipControl.selectedSegmentIndex])
+        
         let total = tip + bill
         
         
         //Seperate tip and total by thousands
-        let thousandsSeperator = NSNumberFormatter()
-        thousandsSeperator.numberStyle = .DecimalStyle
-        thousandsSeperator.minimumFractionDigits = 2
+        let currencyFormatter = NSNumberFormatter()
+        currencyFormatter.numberStyle = .CurrencyStyle
+        currencyFormatter.locale = NSLocale.currentLocale()
         
-        tipLabel.text = thousandsSeperator.stringFromNumber(tip)
-        totalLabel.text = thousandsSeperator.stringFromNumber(total)
+        tipLabel.text = currencyFormatter.stringFromNumber(tip)
+        totalLabel.text = currencyFormatter.stringFromNumber(total)
+        
+        billDefault.setValue(total, forKey: "total")
+        
+        
+        
+        checkSplitLabel1.text = currencyFormatter.stringFromNumber(total/2)
+        checkSplitLabel2.text = currencyFormatter.stringFromNumber(total/3)
+        checkSplitLabel3.text = currencyFormatter.stringFromNumber(total/4)
+        checkSplitLabel4.text = currencyFormatter.stringFromNumber(total/5)
         
         billDefault.synchronize()
         

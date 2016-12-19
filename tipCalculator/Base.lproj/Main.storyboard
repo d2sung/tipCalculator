@@ -5,15 +5,33 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="DIN-Regular.ttf">
-            <string>DIN-Regular</string>
-            <string>DIN-Regular</string>
-            <string>DIN-Regular</string>
-            <string>DIN-Regular</string>
-            <string>DIN-Regular</string>
-            <string>DIN-RegularAlternate</string>
-            <string>DIN-RegularAlternate</string>
-            <string>DIN-RegularAlternate</string>
+        <mutableArray key="TitilliumWeb-BoldItalic.ttf">
+            <string>TitilliumWeb-BoldItalic</string>
+        </mutableArray>
+        <mutableArray key="TitilliumWeb-ExtraLight.ttf">
+            <string>TitilliumWeb-Thin</string>
+        </mutableArray>
+        <mutableArray key="TitilliumWeb-Italic.ttf">
+            <string>TitilliumWeb-Italic</string>
+            <string>TitilliumWeb-Italic</string>
+            <string>TitilliumWeb-Italic</string>
+        </mutableArray>
+        <mutableArray key="TitilliumWeb-Light.ttf">
+            <string>TitilliumWeb-Light</string>
+            <string>TitilliumWeb-Light</string>
+            <string>TitilliumWeb-Light</string>
+            <string>TitilliumWeb-Light</string>
+            <string>TitilliumWeb-Light</string>
+        </mutableArray>
+        <mutableArray key="TitilliumWeb-LightItalic.ttf">
+            <string>TitilliumWeb-LightItalic</string>
+        </mutableArray>
+        <mutableArray key="TitilliumWeb-Regular.ttf">
+            <string>TitilliumWeb-Regular</string>
+            <string>TitilliumWeb-Regular</string>
+            <string>TitilliumWeb-Regular</string>
+            <string>TitilliumWeb-Regular</string>
+            <string>TitilliumWeb-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -29,66 +47,171 @@
                                 <rect key="frame" x="0.0" y="196" width="320" height="372"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" id="Mk4-UF-qSl">
+                                        <rect key="frame" x="0.0" y="159" width="327" height="213"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="mtU-WU-gQs">
+                                                <rect key="frame" x="-33" y="125" width="19" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="ccD-oZ-goY">
+                                                <rect key="frame" x="-33" y="84" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="vja-Nh-AcH">
+                                                <rect key="frame" x="-33" y="40" width="25" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xiS-ai-N20">
+                                                <rect key="frame" x="133" y="63" width="174" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web" pointSize="26"/>
+                                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qST-Qg-CPo">
+                                                <rect key="frame" x="133" y="104" width="174" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web" pointSize="24"/>
+                                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xI2-7u-25h">
+                                                <rect key="frame" x="107" y="144" width="200" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web" pointSize="22"/>
+                                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="qW5-OC-Ka3">
+                                                <rect key="frame" x="33" y="70" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="nKp-tL-eFz">
+                                                <rect key="frame" x="61" y="70" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="8aw-JL-wOz">
+                                                <rect key="frame" x="5" y="111" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="eTX-y5-mJj">
+                                                <rect key="frame" x="33" y="27" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="TRc-Qu-RvK">
+                                                <rect key="frame" x="5" y="70" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="6pj-HF-5QG">
+                                                <rect key="frame" x="5" y="27" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="5" maximumValue="100" id="X7L-FH-mDY">
+                                                <rect key="frame" x="5" y="149" width="94" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <inset key="insetFor6xAndEarlier" minX="22" minY="0.0" maxX="-22" maxY="0.0"/>
+                                                <color key="tintColor" red="1" green="0.93333333330000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="3by-7D-UVE"/>
+                                                </connections>
+                                            </stepper>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="wyS-bo-5wd">
+                                                <rect key="frame" x="107" y="154" width="19" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CPZ-Eg-6ff">
+                                                <rect key="frame" x="126" y="154" width="43" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-BoldItalic" family="Titillium Web" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="fgJ-75-b52">
+                                                <rect key="frame" x="33" y="111" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="Edd-Dg-Tlo">
+                                                <rect key="frame" x="61" y="111" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="j9O-gv-myC">
+                                                <rect key="frame" x="89" y="111" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="is9-dz-3ny">
+                                                <rect key="frame" x="133" y="20" width="174" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web" pointSize="28"/>
+                                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.81176470588235294" green="0.84705882352941175" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                     <view contentMode="scaleToFill" id="rMO-v2-c2m" userLabel="Total View">
-                                        <rect key="frame" x="0.0" y="33" width="320" height="389"/>
+                                        <rect key="frame" x="0.0" y="25" width="320" height="136"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="MpI-r0-Tej">
-                                                <rect key="frame" x="170" y="31" width="142" height="66"/>
+                                                <rect key="frame" x="19" y="39" width="283" height="58"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="DIN-Regular" family="DIN" pointSize="38"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="59"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DKf-PI-3ii">
-                                                <rect key="frame" x="8" y="41" width="88" height="46"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DKf-PI-3ii">
+                                                <rect key="frame" x="8" y="45" width="19" height="46"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="DIN-Regular" family="DIN" pointSize="26"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web" pointSize="25"/>
+                                                <color key="textColor" red="1" green="0.93333333333333335" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="highlightedColor" red="1" green="0.94208036790000005" blue="0.951821845" alpha="0.77683189659999996" colorSpace="calibratedRGB"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.73333333329999995" green="0.83921568629999999" blue="0.52549019610000003" alpha="0.68601831896551735" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.69019607843137254" green="0.74509803921568629" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="6iA-v2-Zvy" userLabel="Tip View">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aso-Mq-BY2">
-                                                <rect key="frame" x="8" y="1" width="25" height="39"/>
+                                                <rect key="frame" x="8" y="-3" width="25" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="DIN-Regular" family="DIN" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-Thin" family="Titillium Web" pointSize="18"/>
+                                                <color key="textColor" red="1" green="0.93333333330000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" id="yuS-0C-5W3">
-                                                <rect key="frame" x="197" y="0.0" width="115" height="42"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00       " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" id="yuS-0C-5W3">
+                                                <rect key="frame" x="20" y="-3" width="292" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="DIN-Regular" family="DIN" pointSize="25"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-LightItalic" family="Titillium Web" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.76862745099999996" green="0.63921568630000003" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.2156862745" green="0.2784313725" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.73333333329999995" green="0.83921568629999999" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.5607843137254902" green="0.54117647058823526" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.3294117647" green="0.43137254899999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="bwo-JH-2pq" userLabel="Faces View" customClass="CSAnimationView">
                                 <rect key="frame" x="0.0" y="164" width="320" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="o3m-lp-Xzo">
-                                        <rect key="frame" x="-7" y="4" width="334" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="o3m-lp-Xzo">
+                                        <rect key="frame" x="-7" y="2" width="334" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.91764705882352937" green="0.94117647058823528" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.2156862745" green="0.2784313725" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <segments>
                                             <segment title="" image="Sad Filled-25.png"/>
                                             <segment title="" image="Happy Filled-25.png"/>
                                             <segment title="" image="LOL Filled-25.png"/>
+                                            <segment title="No Tip"/>
                                         </segments>
-                                        <color key="tintColor" red="0.65752498114630464" green="0.65752498114630464" blue="0.65752498114630464" alpha="0.73943965517241383" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="0.94509803920000002" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZNW-l4-nI6"/>
                                         </connections>
@@ -97,28 +220,29 @@
                                 <color key="backgroundColor" red="0.91764705879999997" green="0.94117647059999998" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="eaM-Z0-lVU" userLabel="Bill View" customClass="CSAnimationView">
-                                <rect key="frame" x="0.0" y="63" width="320" height="104"/>
+                                <rect key="frame" x="0.0" y="63" width="320" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" id="gvs-jo-ncz">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="right" minimumFontSize="17" clearButtonMode="always" id="gvs-jo-ncz">
+                                        <rect key="frame" x="-17" y="0.0" width="337" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.93333333330000001" green="0.94509803920000002" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.52239567843433132" green="0.53342995852187025" blue="0.41873356314076982" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="DIN-Regular" family="DIN" pointSize="48"/>
+                                        <color key="backgroundColor" red="0.2156862745" green="0.2784313725" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.21568627450980393" green="0.27843137254901962" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="52"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         <connections>
                                             <action selector="animateCalcOnDelete:" destination="BYZ-38-t0r" eventType="editingChanged" id="nKc-v3-e2m"/>
                                             <action selector="animateCalcOnInsert:" destination="BYZ-38-t0r" eventType="editingChanged" id="xfS-E5-zcB"/>
-                                            <action selector="animateOnCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="crh-k6-CUb"/>
                                             <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="ilB-YC-TcF"/>
+                                            <action selector="formatBillField:" destination="BYZ-38-t0r" eventType="valueChanged" id="WLr-Dd-LBg"/>
                                         </connections>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.2784313725" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.94117647059999998" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.50588235294117645" green="0.83137254901960778" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="FYB-yC-qKY" appends="YES" id="w6S-dl-UKh"/>
@@ -137,13 +261,35 @@
                         <outlet property="billField" destination="gvs-jo-ncz" id="L2l-JV-zG1"/>
                         <outlet property="billView" destination="eaM-Z0-lVU" id="by0-7g-T6K"/>
                         <outlet property="calculations" destination="gQz-gP-AG3" id="5o3-rv-BtS"/>
+                        <outlet property="checkSplitLabel1" destination="is9-dz-3ny" id="7ql-sn-UD9"/>
+                        <outlet property="checkSplitLabel2" destination="xiS-ai-N20" id="vSS-dJ-xDW"/>
+                        <outlet property="checkSplitLabel3" destination="qST-Qg-CPo" id="0h9-Li-coX"/>
+                        <outlet property="checkSplitLabel4" destination="xI2-7u-25h" id="VyC-fe-zp6"/>
+                        <outlet property="equationSign" destination="DKf-PI-3ii" id="9g6-Yb-DX8"/>
                         <outlet property="facesView" destination="bwo-JH-2pq" id="dPk-el-itk"/>
+                        <outlet property="numUserLabel" destination="CPZ-Eg-6ff" id="nIC-kv-Fv9"/>
+                        <outlet property="plusSign" destination="aso-Mq-BY2" id="AOt-zw-zhy"/>
+                        <outlet property="splitterView" destination="Mk4-UF-qSl" id="06B-BZ-cLf"/>
                         <outlet property="tipControl" destination="o3m-lp-Xzo" id="oxk-r4-INR"/>
                         <outlet property="tipLabel" destination="yuS-0C-5W3" id="1rP-aC-2Zq"/>
                         <outlet property="tipView" destination="6iA-v2-Zvy" id="1K2-A7-H1M"/>
                         <outlet property="tipperView" destination="8bC-Xf-vdC" id="Dgf-GR-CMx"/>
                         <outlet property="totalLabel" destination="MpI-r0-Tej" id="8Ce-Lf-Ide"/>
                         <outlet property="totalView" destination="rMO-v2-c2m" id="uaq-YD-LWT"/>
+                        <outlet property="userStepper" destination="X7L-FH-mDY" id="PZz-bm-Fv9"/>
+                        <outletCollection property="userIcons" destination="6pj-HF-5QG" collectionClass="NSMutableArray" id="899-l6-8XA"/>
+                        <outletCollection property="userIcons" destination="ccD-oZ-goY" collectionClass="NSMutableArray" id="FkG-Tf-bDX"/>
+                        <outletCollection property="userIcons" destination="nKp-tL-eFz" collectionClass="NSMutableArray" id="BXx-b8-lDq"/>
+                        <outletCollection property="userIcons" destination="8aw-JL-wOz" collectionClass="NSMutableArray" id="grU-F2-qgP"/>
+                        <outletCollection property="userIcons" destination="eTX-y5-mJj" collectionClass="NSMutableArray" id="HJZ-1k-KmP"/>
+                        <outletCollection property="userIcons" destination="TRc-Qu-RvK" collectionClass="NSMutableArray" id="jCg-j1-Zfc"/>
+                        <outletCollection property="userIcons" destination="vja-Nh-AcH" collectionClass="NSMutableArray" id="ME2-mm-DFL"/>
+                        <outletCollection property="userIcons" destination="wyS-bo-5wd" collectionClass="NSMutableArray" id="0BB-9i-Fql"/>
+                        <outletCollection property="userIcons" destination="qW5-OC-Ka3" collectionClass="NSMutableArray" id="cy3-7F-uAG"/>
+                        <outletCollection property="userIcons" destination="mtU-WU-gQs" collectionClass="NSMutableArray" id="1LP-7U-c67"/>
+                        <outletCollection property="userIcons" destination="fgJ-75-b52" collectionClass="NSMutableArray" id="COE-Wj-Kay"/>
+                        <outletCollection property="userIcons" destination="Edd-Dg-Tlo" collectionClass="NSMutableArray" id="AHt-IF-wbI"/>
+                        <outletCollection property="userIcons" destination="j9O-gv-myC" collectionClass="NSMutableArray" id="mp2-0T-eck"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -164,7 +310,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="yux-Bi-1J7">
-                                <rect key="frame" x="0.0" y="105" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="101" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="SbN-bu-axP">
@@ -178,9 +324,9 @@
                                         </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light/Dark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PuI-DT-zze">
-                                        <rect key="frame" x="8" y="3" width="84" height="37"/>
+                                        <rect key="frame" x="8" y="6" width="84" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="DIN-RegularAlternate" family="DIN" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -189,7 +335,7 @@
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="ROm-Pk-eUc" userLabel="Set Default View">
-                                <rect key="frame" x="0.0" y="66" width="320" height="39"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="3xt-Ij-GHg">
@@ -207,9 +353,9 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Response" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GFM-YF-QGH">
-                                        <rect key="frame" x="8" y="5" width="145" height="31"/>
+                                        <rect key="frame" x="8" y="0.0" width="145" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="DIN-RegularAlternate" family="DIN" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -217,13 +363,13 @@
                                 <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="FAk-IF-WYf" userLabel="Set Default View">
-                                <rect key="frame" x="0.0" y="144" width="320" height="39"/>
+                                <rect key="frame" x="0.0" y="141" width="320" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Gratuity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hQI-o5-BG0">
-                                        <rect key="frame" x="8" y="8" width="129" height="39"/>
+                                        <rect key="frame" x="96" y="0.0" width="129" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="DIN-RegularAlternate" family="DIN" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -231,7 +377,7 @@
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="AK4-V6-16M" userLabel="Set Sad View">
-                                <rect key="frame" x="0.0" y="182" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="179" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sad Filled-25.png" id="bHc-3n-1Th">
@@ -243,12 +389,15 @@
                                         <rect key="frame" x="148" y="5" width="166" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="minimumTrackTintColor" red="0.26274509800000001" green="0.83529411760000005" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="sadSliderValueChanged:" destination="J0Q-ZW-uVX" eventType="valueChanged" id="1h0-W6-c9q"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qrr-Z0-vtu" userLabel="Sad Label">
                                         <rect key="frame" x="103" y="7" width="52" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-Italic" family="Titillium Web" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -256,7 +405,7 @@
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="dNJ-E3-MU1" userLabel="Set Happy View">
-                                <rect key="frame" x="0.0" y="221" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="219" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy Filled-25.png" id="ECz-xa-UDr">
@@ -264,24 +413,27 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" id="y91-D8-FZI" userLabel="Sad Slider">
-                                        <rect key="frame" x="148" y="2" width="166" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="minimumTrackTintColor" red="0.26274509800000001" green="0.83529411760000005" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a5B-fg-eDd" userLabel="Happy Label">
                                         <rect key="frame" x="99" y="5" width="61" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-Italic" family="Titillium Web" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="100" id="y91-D8-FZI" userLabel="Sad Slider">
+                                        <rect key="frame" x="148" y="2" width="166" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" red="0.26274509800000001" green="0.83529411760000005" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="happySliderValueChanged:" destination="J0Q-ZW-uVX" eventType="valueChanged" id="cS4-uC-4R5"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="JbR-ZN-LPn" userLabel="Set LOL View">
-                                <rect key="frame" x="0.0" y="258" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="256" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOL Filled-25.png" id="oqi-6a-Xhd">
@@ -289,21 +441,39 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="100" id="IZR-84-Xu7" userLabel="Sad Slider">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" id="IZR-84-Xu7" userLabel="Sad Slider">
                                         <rect key="frame" x="148" y="5" width="166" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="minimumTrackTintColor" red="0.26274509800000001" green="0.83529411760000005" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="lolSliderValueChanged:" destination="J0Q-ZW-uVX" eventType="valueChanged" id="gBu-oV-fKi"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IrP-ZS-1YQ" userLabel="LOL Label">
                                         <rect key="frame" x="98" y="6" width="61" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-Italic" family="Titillium Web" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="2Bi-qo-Vpt" userLabel="ResetView">
+                                <rect key="frame" x="0.0" y="295" width="320" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kFG-DQ-59T">
+                                        <rect key="frame" x="112" y="5" width="96" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Reset gratuity"/>
+                                        <connections>
+                                            <action selector="resetGratuity:" destination="J0Q-ZW-uVX" eventType="touchUpInside" id="Pl1-YU-ifq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -316,12 +486,17 @@
                         <outlet property="defaultGratuityView" destination="FAk-IF-WYf" id="5Qt-sY-Gkn"/>
                         <outlet property="happyIcon" destination="ECz-xa-UDr" id="ojM-no-TRw"/>
                         <outlet property="happyLabel" destination="a5B-fg-eDd" id="EZd-YJ-UGL"/>
+                        <outlet property="happySlider" destination="y91-D8-FZI" id="iQl-to-0sK"/>
                         <outlet property="happyView" destination="dNJ-E3-MU1" id="WAN-xn-mpX"/>
                         <outlet property="lolIcon" destination="oqi-6a-Xhd" id="pY6-Wf-tJu"/>
                         <outlet property="lolLabel" destination="IrP-ZS-1YQ" id="OR5-gn-u6r"/>
+                        <outlet property="lolSlider" destination="IZR-84-Xu7" id="d5b-S0-sep"/>
                         <outlet property="lolView" destination="JbR-ZN-LPn" id="MSe-uk-KPp"/>
+                        <outlet property="resetButton" destination="kFG-DQ-59T" id="xTj-n7-Xpv"/>
+                        <outlet property="resetView" destination="2Bi-qo-Vpt" id="gOb-LB-Aes"/>
                         <outlet property="sadIcon" destination="bHc-3n-1Th" id="aKA-S1-gtg"/>
                         <outlet property="sadLabel" destination="Qrr-Z0-vtu" id="Fkc-Yp-xde"/>
+                        <outlet property="sadSlider" destination="fJp-19-PxM" id="eLN-0w-wce"/>
                         <outlet property="sadView" destination="AK4-V6-16M" id="swp-HC-Nyf"/>
                         <outlet property="setDefaultLabel" destination="GFM-YF-QGH" id="TNE-9E-m3a"/>
                         <outlet property="setDefaultView" destination="ROm-Pk-eUc" id="oMV-TM-MvE"/>
@@ -342,6 +517,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="U8b-Kr-Dbn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83675881409999997" green="0.83675881409999997" blue="0.83675881409999997" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -358,6 +534,7 @@
         <image name="LOL Filled-25.png" width="25" height="25"/>
         <image name="Sad Filled-25.png" width="25" height="25"/>
         <image name="Settings Filled-25.png" width="25" height="25"/>
+        <image name="personIcon.png" width="25" height="25"/>
     </resources>
-    <color key="tintColor" red="0.2627450980392157" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
