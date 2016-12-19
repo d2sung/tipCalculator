@@ -11,25 +11,19 @@ import UIKit
 
 struct Style {
     
-    //Light
+    //Light: Yellow
     //UIColor(red:1.00, green:0.92, blue:0.23, alpha:1.0)
     //UIColor(red:1.00, green:0.93, blue:0.35, alpha:1.0)
     //UIColor(red:1.00, green:0.95, blue:0.46, alpha:1.0)
     //UIColor(red:1.00, green:0.96, blue:0.62, alpha:1.0)
     //UIColor(red:1.00, green:0.98, blue:0.77, alpha:1.0)
     
-    
-    
-    
-    //Dark
+    //Dark: Blue
     //UIColor(red:0.47, green:0.56, blue:0.61, alpha:1.0)
     //UIColor(red:0.56, green:0.64, blue:0.68, alpha:1.0)
     //UIColor(red:0.69, green:0.75, blue:0.77, alpha:1.0)
     //UIColor(red:0.81, green:0.85, blue:0.86, alpha:1.0)
     //UIColor(red:1.00, green:0.99, blue:0.91, alpha:1.0)
-    
-    //Accent
-    //UIColor(red:1.00, green:0.95, blue:0.46, alpha:1.0)
     
     //View
     static var viewBgColor = UIColor(red:1.00, green:0.92, blue:0.23, alpha:1.0)

@@ -39,7 +39,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var lolLabel: UILabel!
     @IBOutlet weak var lolSlider: UISlider!
     @IBOutlet weak var lolView: UIView!
-   
+    
+    //Reset
     @IBOutlet weak var resetView: UIView!
     @IBOutlet weak var resetButton: UIButton!
     
@@ -65,7 +66,7 @@ class SettingsViewController: UIViewController {
         else {Style.lightTheme()}
         self.setTheme()
         
-        //Set Sliders
+        //Set Sliders: If first time, then set defaults
         if defaults.objectForKey("sadSlider") == nil {
             sadSlider.setValue(10, animated: false)
             sadLabel.text = "10%"
@@ -77,8 +78,8 @@ class SettingsViewController: UIViewController {
             lolLabel.text = "20%"
         }
         
+        //Else, load the saved slider values
         else {
-            
             let sadValue = defaults.integerForKey("sadSlider")
             sadSlider.setValue(Float(sadValue), animated: false)
             sadLabel.text = String(sadValue) + "%"
@@ -91,10 +92,6 @@ class SettingsViewController: UIViewController {
             lolSlider.setValue(Float(lolValue), animated: false)
             lolLabel.text = String(lolValue) + "%"
         }
-        
-        
-        
-        
         defaults.synchronize()
 
     }
@@ -105,6 +102,9 @@ class SettingsViewController: UIViewController {
     }
     
     
+    /*setTheme:
+     *Set the colors of the setting page
+     */
     func setTheme(){
         //Set Default
         setDefaultView.backgroundColor = Style.darkBar
@@ -112,7 +112,6 @@ class SettingsViewController: UIViewController {
         defaultControl.tintColor = Style.darkText
         defaultControl.backgroundColor = Style.lightBar
 
-        
         //Set theme switch
         themeLabel.textColor = Style.darkText
         themeView.backgroundColor = Style.lightBar
@@ -139,6 +138,7 @@ class SettingsViewController: UIViewController {
         lolIcon.image = lolIcon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         lolIcon.tintColor = Style.darkText
         
+        //Reset
         resetView.backgroundColor = Style.darkBar
         resetButton.tintColor = Style.darkText
         
@@ -148,6 +148,9 @@ class SettingsViewController: UIViewController {
         lolSlider.minimumTrackTintColor = Style.darkText
     }
     
+    /* resetGratuity:
+     * On button press, reset gratuity sliders to default
+     */
     @IBAction func resetGratuity(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         
@@ -162,10 +165,8 @@ class SettingsViewController: UIViewController {
         lolSlider.setValue(20, animated: false)
         defaults.setInteger(20, forKey: "lolSlider")
         lolLabel.text = "20%"
-
-        
-        
     }
+    
     //Allow user to set the default index for the segment control (faces)
     @IBAction func setDefault(sender: UISegmentedControl) {
         let tipDefault = NSUserDefaults.standardUserDefaults()
@@ -213,6 +214,10 @@ class SettingsViewController: UIViewController {
         self.setTheme()
 
     }
+    
+    /*
+     *
+     */
     @IBAction func sadSliderValueChanged(sender: UISlider) {
         sadLabel.text = "\(Int(sender.value))%"
         let defaults = NSUserDefaults.standardUserDefaults()
