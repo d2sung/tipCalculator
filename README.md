@@ -33,7 +33,7 @@ Here's a walkthrough of implemented user stories:
 
 <img src='videoWalkthrough.gif' title='Video Walkthrough of required functions, light/dark theme, customizable mood choices, bill splitting and animations' width='' alt='Video Walkthrough' />
 
-<img src='walkThrough.gif' title='Video Walkthrough of locale-specific currency' width='' alt='Video Walkthrough' />
+<img src='walkthrough.gif' title='Video Walkthrough of locale-specific currency' width='' alt='Video Walkthrough' />
 
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
