@@ -88,6 +88,10 @@ class ViewController: UIViewController, UITextFieldDelegate{
         
         //Animate billField
         //If view came from settings and the bill field is not empty, then bill field should be at the top of view
+        if defaults.objectForKey("fromSettings") == nil {
+            billView.center.y = 305
+        }
+        
         if defaults.boolForKey("fromSettings"){
             if let text = billField.text where !text.isEmpty {
                 billView.center.y = 105
