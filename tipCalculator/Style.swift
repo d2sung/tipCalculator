@@ -53,7 +53,9 @@ struct Style {
     
     static var darkText = UIColor(red:0.18, green:0.46, blue:0.50, alpha:1.0)
     static var lightText = UIColor.whiteColor()
-    static var placeHolderColor = UIColor(red:0.93, green:0.94, blue:0.95, alpha:1.0)
+    static var placeHolderColor = UIColor(red:0.62, green:0.62, blue:0.62, alpha:0.5)
+    
+    static var icon = UIColor(red:0.12, green:0.38, blue:0.38, alpha:1)
     
     static func lightTheme(){
         //View
@@ -70,7 +72,7 @@ struct Style {
         
         //Tip
         tipBgColor =  UIColor(red:1.00, green:0.96, blue:0.62, alpha:1.0)
-        tipTextColor = UIColor(red:0.18, green:0.46, blue:0.50, alpha:1.0)
+        tipTextColor = UIColor(red:0.33, green:0.43, blue:0.48, alpha:0.65)
         
         //Total
         totalBgColor = UIColor(red:1.00, green:0.98, blue:0.77, alpha:1.0)
@@ -85,7 +87,9 @@ struct Style {
         darkText = UIColor(red:0.33, green:0.43, blue:0.48, alpha:1.0)
         
         lightText = UIColor.whiteColor()
-        placeHolderColor = UIColor(red:0.93, green:0.94, blue:0.95, alpha:1.0)
+        placeHolderColor = UIColor(red:0.62, green:0.62, blue:0.62, alpha:0.5)
+        
+        icon = UIColor(red:0.12, green:0.38, blue:0.38, alpha:1)
     }
     
     
@@ -120,7 +124,8 @@ struct Style {
         darkText = UIColor(red:1.00, green:0.95, blue:0.46, alpha:1.0)
         lightText = UIColor(red:0.22, green:0.28, blue:0.31, alpha:1.0)
         
-        placeHolderColor = UIColor(red:1.00, green:0.99, blue:0.91, alpha:1.0)
+        placeHolderColor = UIColor(red:0.62, green:0.62, blue:0.62, alpha:0.5)
+        icon = UIColor(red:1.00, green:0.95, blue:0.46, alpha:1.0)
     }
 
 }

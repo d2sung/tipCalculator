@@ -11,16 +11,16 @@
         <mutableArray key="TitilliumWeb-ExtraLight.ttf">
             <string>TitilliumWeb-Thin</string>
         </mutableArray>
+        <mutableArray key="TitilliumWeb-ExtraLightItalic.ttf">
+            <string>TitilliumWeb-ThinItalic</string>
+            <string>TitilliumWeb-ThinItalic</string>
+            <string>TitilliumWeb-ThinItalic</string>
+            <string>TitilliumWeb-ThinItalic</string>
+        </mutableArray>
         <mutableArray key="TitilliumWeb-Italic.ttf">
             <string>TitilliumWeb-Italic</string>
             <string>TitilliumWeb-Italic</string>
             <string>TitilliumWeb-Italic</string>
-        </mutableArray>
-        <mutableArray key="TitilliumWeb-Light.ttf">
-            <string>TitilliumWeb-Light</string>
-            <string>TitilliumWeb-Light</string>
-            <string>TitilliumWeb-Light</string>
-            <string>TitilliumWeb-Light</string>
         </mutableArray>
         <mutableArray key="TitilliumWeb-LightItalic.ttf">
             <string>TitilliumWeb-LightItalic</string>
@@ -31,13 +31,14 @@
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
+            <string>TitilliumWeb-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Tipper-->
+        <!--tipper-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tipper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,50 +66,80 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xiS-ai-N20">
                                                 <rect key="frame" x="133" y="63" width="174" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-ThinItalic" family="Titillium Web" pointSize="20"/>
                                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qST-Qg-CPo">
                                                 <rect key="frame" x="133" y="104" width="174" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-ThinItalic" family="Titillium Web" pointSize="20"/>
                                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="is9-dz-3ny">
+                                                <rect key="frame" x="133" y="20" width="174" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-ThinItalic" family="Titillium Web" pointSize="20"/>
+                                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_person_18pt.png" id="r5f-Lh-NRu">
+                                                <rect key="frame" x="8" y="28" width="18" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_person_18pt.png" id="9iy-8B-tiG">
+                                                <rect key="frame" x="34" y="28" width="18" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_person_18pt.png" id="EDS-wN-QW2">
+                                                <rect key="frame" x="60" y="71" width="18" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_person_18pt.png" id="J7F-nd-Cd2">
+                                                <rect key="frame" x="8" y="112" width="18" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_person_18pt.png" id="gBR-Fl-47q">
+                                                <rect key="frame" x="34" y="112" width="18" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_person_18pt.png" id="Lj3-iz-h4y">
+                                                <rect key="frame" x="60" y="112" width="18" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_person_18pt.png" id="eoh-QI-7cr">
+                                                <rect key="frame" x="8" y="71" width="18" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_person_18pt.png" id="Z1e-eu-E2J">
+                                                <rect key="frame" x="34" y="71" width="18" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_person_18pt.png" id="kzJ-eC-ozi">
+                                                <rect key="frame" x="86" y="112" width="18" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CPZ-Eg-6ff">
+                                                <rect key="frame" x="128" y="158" width="43" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-BoldItalic" family="Titillium Web" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xI2-7u-25h">
-                                                <rect key="frame" x="107" y="144" width="200" height="33"/>
+                                                <rect key="frame" x="133" y="146" width="174" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="TitilliumWeb-ThinItalic" family="Titillium Web" pointSize="20"/>
                                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="qW5-OC-Ka3">
-                                                <rect key="frame" x="33" y="70" width="20" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="nKp-tL-eFz">
-                                                <rect key="frame" x="61" y="70" width="20" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="8aw-JL-wOz">
-                                                <rect key="frame" x="5" y="111" width="20" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="eTX-y5-mJj">
-                                                <rect key="frame" x="33" y="27" width="20" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="TRc-Qu-RvK">
-                                                <rect key="frame" x="5" y="70" width="20" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="6pj-HF-5QG">
-                                                <rect key="frame" x="5" y="27" width="20" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_person_18pt.png" id="QHx-xy-15l">
+                                                <rect key="frame" x="107" y="160" width="18" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="5" maximumValue="100" id="X7L-FH-mDY">
-                                                <rect key="frame" x="5" y="149" width="94" height="29"/>
+                                                <rect key="frame" x="8" y="154" width="94" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <inset key="insetFor6xAndEarlier" minX="22" minY="0.0" maxX="-22" maxY="0.0"/>
@@ -117,36 +148,6 @@
                                                     <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="3by-7D-UVE"/>
                                                 </connections>
                                             </stepper>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="wyS-bo-5wd">
-                                                <rect key="frame" x="107" y="154" width="19" height="19"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CPZ-Eg-6ff">
-                                                <rect key="frame" x="126" y="154" width="43" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="TitilliumWeb-BoldItalic" family="Titillium Web" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="fgJ-75-b52">
-                                                <rect key="frame" x="33" y="111" width="20" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="Edd-Dg-Tlo">
-                                                <rect key="frame" x="61" y="111" width="20" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="j9O-gv-myC">
-                                                <rect key="frame" x="89" y="111" width="20" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="is9-dz-3ny">
-                                                <rect key="frame" x="133" y="20" width="174" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web" pointSize="20"/>
-                                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.81176470588235294" green="0.84705882352941175" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
@@ -154,12 +155,12 @@
                                         <rect key="frame" x="0.0" y="70" width="320" height="136"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personIcon.png" id="3Yq-ES-zcB">
-                                                <rect key="frame" x="8" y="58" width="20" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_person_18pt.png" id="ltQ-sa-fKJ">
+                                                <rect key="frame" x="8" y="59" width="18" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="MpI-r0-Tej">
-                                                <rect key="frame" x="29" y="39" width="283" height="58"/>
+                                                <rect key="frame" x="29" y="34" width="283" height="58"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="59"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -237,8 +238,8 @@
                             <outletCollection property="gestureRecognizers" destination="FYB-yC-qKY" appends="YES" id="w6S-dl-UKh"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tipper" id="yRh-YG-YWR" colorLabel="IBBuiltInLabel-Gray">
-                        <barButtonItem key="rightBarButtonItem" image="Settings Filled-25.png" id="QFQ-8y-mBw">
+                    <navigationItem key="navigationItem" title="tipper" id="yRh-YG-YWR" colorLabel="IBBuiltInLabel-Gray">
+                        <barButtonItem key="rightBarButtonItem" image="ic_settings_18pt_2x.png" id="QFQ-8y-mBw">
                             <color key="tintColor" red="0.51380443948291532" green="0.53263221153846152" blue="0.51496236865372735" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="J0Q-ZW-uVX" kind="push" id="IZy-af-X2M"/>
@@ -264,20 +265,20 @@
                         <outlet property="totalLabel" destination="MpI-r0-Tej" id="8Ce-Lf-Ide"/>
                         <outlet property="totalView" destination="rMO-v2-c2m" id="uaq-YD-LWT"/>
                         <outlet property="userStepper" destination="X7L-FH-mDY" id="PZz-bm-Fv9"/>
-                        <outletCollection property="userIcons" destination="6pj-HF-5QG" collectionClass="NSMutableArray" id="899-l6-8XA"/>
                         <outletCollection property="userIcons" destination="ccD-oZ-goY" collectionClass="NSMutableArray" id="FkG-Tf-bDX"/>
-                        <outletCollection property="userIcons" destination="nKp-tL-eFz" collectionClass="NSMutableArray" id="BXx-b8-lDq"/>
-                        <outletCollection property="userIcons" destination="8aw-JL-wOz" collectionClass="NSMutableArray" id="grU-F2-qgP"/>
-                        <outletCollection property="userIcons" destination="eTX-y5-mJj" collectionClass="NSMutableArray" id="HJZ-1k-KmP"/>
-                        <outletCollection property="userIcons" destination="TRc-Qu-RvK" collectionClass="NSMutableArray" id="jCg-j1-Zfc"/>
                         <outletCollection property="userIcons" destination="vja-Nh-AcH" collectionClass="NSMutableArray" id="ME2-mm-DFL"/>
-                        <outletCollection property="userIcons" destination="wyS-bo-5wd" collectionClass="NSMutableArray" id="0BB-9i-Fql"/>
-                        <outletCollection property="userIcons" destination="qW5-OC-Ka3" collectionClass="NSMutableArray" id="cy3-7F-uAG"/>
                         <outletCollection property="userIcons" destination="mtU-WU-gQs" collectionClass="NSMutableArray" id="1LP-7U-c67"/>
-                        <outletCollection property="userIcons" destination="fgJ-75-b52" collectionClass="NSMutableArray" id="COE-Wj-Kay"/>
-                        <outletCollection property="userIcons" destination="Edd-Dg-Tlo" collectionClass="NSMutableArray" id="AHt-IF-wbI"/>
-                        <outletCollection property="userIcons" destination="j9O-gv-myC" collectionClass="NSMutableArray" id="mp2-0T-eck"/>
-                        <outletCollection property="userIcons" destination="3Yq-ES-zcB" collectionClass="NSMutableArray" id="bZy-rY-WBv"/>
+                        <outletCollection property="userIcons" destination="ltQ-sa-fKJ" collectionClass="NSMutableArray" id="9dV-f7-1Yb"/>
+                        <outletCollection property="userIcons" destination="r5f-Lh-NRu" collectionClass="NSMutableArray" id="sPA-xJ-HKC"/>
+                        <outletCollection property="userIcons" destination="9iy-8B-tiG" collectionClass="NSMutableArray" id="yOe-ks-KS8"/>
+                        <outletCollection property="userIcons" destination="eoh-QI-7cr" collectionClass="NSMutableArray" id="gKF-dt-1gH"/>
+                        <outletCollection property="userIcons" destination="Z1e-eu-E2J" collectionClass="NSMutableArray" id="y2H-9q-Oh5"/>
+                        <outletCollection property="userIcons" destination="EDS-wN-QW2" collectionClass="NSMutableArray" id="4Xi-Cl-JbR"/>
+                        <outletCollection property="userIcons" destination="J7F-nd-Cd2" collectionClass="NSMutableArray" id="qcJ-D2-uOP"/>
+                        <outletCollection property="userIcons" destination="gBR-Fl-47q" collectionClass="NSMutableArray" id="MOK-NU-bpG"/>
+                        <outletCollection property="userIcons" destination="Lj3-iz-h4y" collectionClass="NSMutableArray" id="gTk-w1-12Z"/>
+                        <outletCollection property="userIcons" destination="kzJ-eC-ozi" collectionClass="NSMutableArray" id="4Oz-9Z-38t"/>
+                        <outletCollection property="userIcons" destination="QHx-xy-15l" collectionClass="NSMutableArray" id="Bcy-Sm-S8T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -292,7 +293,7 @@
         <!--Settings-->
         <scene sceneID="ola-FG-uLA">
             <objects>
-                <viewController id="J0Q-ZW-uVX" customClass="SettingsViewController" customModule="tipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J0Q-ZW-uVX" customClass="SettingsViewController" customModule="tipper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dk7-eX-3wx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -453,9 +454,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kFG-DQ-59T">
-                                        <rect key="frame" x="112" y="5" width="96" height="30"/>
+                                        <rect key="frame" x="92" y="8" width="136" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Reset gratuity"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="15"/>
+                                        <state key="normal" title="Reset Gratuity"/>
                                         <connections>
                                             <action selector="resetGratuity:" destination="J0Q-ZW-uVX" eventType="touchUpInside" id="Pl1-YU-ifq"/>
                                         </connections>
@@ -463,8 +466,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" id="BXN-rw-XfN">
+                                <rect key="frame" x="0.0" y="334" width="320" height="234"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="sDi-d4-hjY"/>
@@ -480,6 +488,7 @@
                         <outlet property="lolLabel" destination="IrP-ZS-1YQ" id="OR5-gn-u6r"/>
                         <outlet property="lolSlider" destination="IZR-84-Xu7" id="d5b-S0-sep"/>
                         <outlet property="lolView" destination="JbR-ZN-LPn" id="MSe-uk-KPp"/>
+                        <outlet property="remainingView" destination="BXN-rw-XfN" id="ZGa-LB-LmQ"/>
                         <outlet property="resetButton" destination="kFG-DQ-59T" id="xTj-n7-Xpv"/>
                         <outlet property="resetView" destination="2Bi-qo-Vpt" id="gOb-LB-Aes"/>
                         <outlet property="sadIcon" destination="bHc-3n-1Th" id="aKA-S1-gtg"/>
@@ -506,6 +515,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.83675881409999997" green="0.83675881409999997" blue="0.83675881409999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="TitilliumWeb-BoldItalic" family="Titillium Web" pointSize="0.0"/>
+                            <color key="textColor" red="0.2156862745" green="0.2784313725" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -521,7 +535,8 @@
         <image name="Happy Filled-25.png" width="25" height="25"/>
         <image name="LOL Filled-25.png" width="25" height="25"/>
         <image name="Sad Filled-25.png" width="25" height="25"/>
-        <image name="Settings Filled-25.png" width="25" height="25"/>
+        <image name="ic_person_18pt.png" width="18" height="18"/>
+        <image name="ic_settings_18pt_2x.png" width="36" height="36"/>
         <image name="personIcon.png" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

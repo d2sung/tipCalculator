@@ -45,11 +45,19 @@ class ViewController: UIViewController, UITextFieldDelegate{
     var startup:Bool = true             //True if
     var fromSettings:Bool = false       //True if view came from settings
     var firstInsert = true              //True if
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        //Set navbar to icon
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .ScaleAspectFit
+        
+        let image = UIImage(named: "Icon-App-29x29@3x.png")
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+        
         //Bool Flags
         self.calculations.hidden = true
         billField.delegate = self
@@ -94,6 +102,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         self.calculateTip(self)
         startup = false
         
+        
         defaults.synchronize()
     }
     
@@ -116,6 +125,29 @@ class ViewController: UIViewController, UITextFieldDelegate{
             defaults.setBool(false, forKey: "fromSettings")
             defaults.synchronize()
         }
+        
+        //NSDate
+        let date = NSDate.init()
+        
+        
+        if defaults.objectForKey("date") == nil{
+            defaults.setObject(date, forKey: "date")
+        }
+            
+        else {
+            
+            let oldDate = defaults.objectForKey("date") as! NSDate
+            let timeChange = date.timeIntervalSinceDate(oldDate)
+            
+            if timeChange < 600 {
+                billField.text = defaults.stringForKey("bill")
+            }
+            
+            else {
+                billField.text = nil
+            }
+        }
+
         
         billField.becomeFirstResponder()
     }
@@ -142,7 +174,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         billField.backgroundColor = Style.billBgColor
         billField.textColor = Style.billTextColor
         billField.attributedPlaceholder = NSAttributedString(string:"$0", attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
-        billField.setPlaceholderColor(UIColor(red:0.81, green:0.85, blue:0.86, alpha:0.30))
+        billField.setPlaceholderColor(Style.placeHolderColor)
         billField.tintColor = Style.facesTintColor
         
         //Faces
@@ -165,7 +197,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         //Set all userIcons to same color
         for userIcon in self.userIcons {
             userIcon.image = userIcon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-            userIcon.tintColor = Style.facesTintColor
+            userIcon.tintColor = Style.icon
         }
         
         //Splitter
@@ -174,6 +206,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         checkSplitLabel2.textColor = Style.totalTextColor
         checkSplitLabel3.textColor = Style.totalTextColor
         checkSplitLabel4.textColor = Style.totalTextColor
+        
         numUserLabel.textColor = Style.facesTintColor
         userStepper.tintColor = Style.facesTintColor
     }

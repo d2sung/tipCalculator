@@ -44,6 +44,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var resetView: UIView!
     @IBOutlet weak var resetButton: UIButton!
     
+    @IBOutlet weak var remainingView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -117,6 +118,7 @@ class SettingsViewController: UIViewController {
         themeView.backgroundColor = Style.lightBar
         themeSwitch.onTintColor = Style.darkText
         
+        
         defaultGratuityText.textColor = Style.darkText
         defaultGratuityView.backgroundColor = Style.darkBar
         
@@ -146,6 +148,8 @@ class SettingsViewController: UIViewController {
         sadSlider.minimumTrackTintColor = Style.darkText
         happySlider.minimumTrackTintColor = Style.darkText
         lolSlider.minimumTrackTintColor = Style.darkText
+        
+        remainingView.backgroundColor = Style.lightBar
     }
     
     /* resetGratuity:
